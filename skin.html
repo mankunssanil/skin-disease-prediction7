@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Skin Disease Prediction</title>
+	<link rel="shortcut icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fskin-rash-icon&psig=AOvVaw2fHbzzd3zXBvefJtwi61lF&ust=1707555273878000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKjs3JzxnYQDFQAAAAAdAAAAABAE"/>
+
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Melanocytic nevi, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<style>
+		html {
+			font-size: 1rem;
+		}
+
+		@media (min-width: 576px) {
+			html {
+				font-size: 1.25rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			html {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media (min-width: 992px) {
+			html {
+				font-size: 1.75rem;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			html {
+				font-size: 2rem;
+			}
+
+			html {
+				font-size: 1rem;
+			}
+
+			h1 {
+				font-size: 1.2rem;
+			}
+
+			h2 {
+				font-size: 1.1rem;
+			}
+
+			@media (min-width: 768px) {
+				html {
+					font-size: 1.1rem;
+				}
+
+				h1 {
+					font-size: 1.3rem;
+				}
+
+				h2 {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (min-width: 991px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.7rem;
+				}
+
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+
+		}
+	</style>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	</body>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fskin-rash-icon&psig=AOvVaw2fHbzzd3zXBvefJtwi61lF&ust=1707555273878000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKjs3JzxnYQDFQAAAAAdAAAAABAE"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- bootstrap css -->
+	<link href="style.css" rel='stylesheet' type='text/css' />
+	<!-- custom css -->
+	<link href="font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	<!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+
+
+	<script type="text/JavaScript" src="cities.js"></script>
+
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+		rel="stylesheet">
+	<!-- //google fonts -->
+
+	<style>
+		header {
+			background-color: rgba(30, 30, 30, 1);
+			margin-top: 0rem;
+			display: block;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
+		<div class="container">
+			<a class="navbar-brand" href="#home">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdYQoIKvPg9HNvvYVbKXfQjgFUKlKgGl87j7MYs6S0g&s" style="width: 90px; height: 55px" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#home">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="About Us.html">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Our Services.html">Our Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Skin Disease Prediction.html">Skin Disease Prediction</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- footer -->
+
+	<!-- //footer -->
+
+	<!-- move top icon -->
+	<a href="#home" class="move-top text-center"></a>
+	<!-- //move top icon -->
+        <!--{% extends 'layout.html' %}
+        {% block body %}-->
+			<!-- banner -->
+			<section  style="background-image: url('https://as2.ftcdn.net/v2/jpg/01/17/12/37/1000_F_117123796_MBKR6xeMfrBdfhSWNWtjTddwUci1F2HR.jpg'); 
+			background-position: center;" 
+			class="banner_w3lspvt" id="home">
+				<div class="csslider infinity" id="slider1">
+				
+							<div class="banner-top">
+								<div class="overlay">
+									<div class="container">
+										<div class="w3layouts-banner-info text-center">
+											<h2 class="text-wh">Skin Disease</h2>
+											<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your Skin Disease.</b></h4>
+											<br>
+											<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+											<p style="text-align: justify;" class="text-li mx-auto mt-2">
+												1. What questions do you ask to know more about skin diseases?<br>
+												2. What is the methodology of skin disease detection? <br>
+												3. How do you identify a skin disease? <br>
+												4. What are the 7 skin diseases?<br>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				</div>
+			</section>
+			<!-- //banner -->
+
+			<!-- core values -->
+			<section class="core-value py-5">
+				<div class="container py-md-4">
+					<h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
+					<div class="row core-grids">
+						<div class="col-lg-6 core-left">
+							<img src="https://www.shutterstock.com/image-photo/ill-allergic-rash-dermatitis-eczema-260nw-522715066.jpg" class="img-fluid" alt="" />
+						</div>
+						<div class="col-lg-6 core-right">
+							<h3 class="mt-4">skin disease is a useful technology because when we predicted the disease we can reduce or decrease the diseases
+								.</h3>
+							<p class="mt-3">We use state-of-the-art machine learning and deep learning technologies to help you
+								guide through
+								the entire skin disease prediction process. Make informed to understand the demographics of your area,
+								understand the
+								factors that affect your skin and keep them healthy for a super awesome successful skin.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- //core values -->
+
+			<!-- Products & Services -->
+			<section class="blog py-5">
+				<div class="container py-md-5">
+					<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
+					<div class="row blog-grids">
+						<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZm9Tfasd5czL3BLXyU_uJA8g3BK4y6e-4Rqb-NpunzA&s" class="img-fluid" alt="" />
+							<a href="Healthy skin.html">
+								<div class="blog-info">
+
+									<h4>Healthy Skin </h4>
+									<p class="mt-2">  which is best suited for skin diseasefor the respective conditions
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 blog-left-left mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCV57cva7N244RiIwxEj-llAOGKdx3XXL-JS-WUv93PA&s" class="img-fluid" alt="" />
+							<a href="Melanocytic nevi.html">
+								<div class="blog-info">
+
+									<h4>Melanocytic nevi</h4>
+
+									<p class="mt-2"> Melanocytic nevus is the medical term for a mole. Nevi can appear anywhere on the body. They are benign (non-cancerous) and typically do not require treatment. A very small percentage of melanocytic nevi may develop a melanoma﻿ within them.</p>
+								</div>
+							</a>
+                        </div>
+							<div class="col-lg-4 col-md-6 blog-left-left mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCgopJPhLfDfvtptkbUnG6noHciBsISgmyNs6j-t2qQ&s" class="img-fluid" alt="" />
+								<a href="Melanoma">
+									<div class="blog-info">
+	
+										<h4>Melanoma</h4>
+	
+										<p class="mt-2"> Melanoma is the deadliest of skin cancers. Rates of diagnosis for the disease have increased dramatically over the past three decades, outpacing almost all other cancers. Today, it is one of the most common cancers found among young adults in the United States.</p>
+									</div>
+								</a>
+                            </div>
+						</div>
+                        <section class="blog py-5">
+                            <div class="container py-md-5">
+                                <div class="row blog-grids">
+						<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://www.verywellhealth.com/thmb/skUrSk2chSNiKJAFOoORbWaK3rE=/1772x1250/filters:no_upscale():max_bytes(150000):strip_icc()/sebks57-8862d0cdef9c4ecfa8cba33871b9efa7.jpg" class="img-fluid" alt="" />
+							<a href="Benign keratosis-like lesions.html">
+								<div class="blog-info">
+									<h4>Benign keratosis-like lesions</h4>
+									<p class="mt-2">Seborrheic keratosis (SK), lichen planus-like keratosis (LPLK), and solar lentigo (SL) are common benign skin lesions.</p>
+								</div>
+							</a>
+                        </div>
+                        
+						<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPbDC8Y9_86Bdw5wNZwzY3XPo_UejDEeHULj5PQ6wuYQ&s" class="img-fluid" alt="" />
+							<a href="Basal cell carcinoma.html">
+								<div class="blog-info">
+									<h4>Basal cell carcinoma</h4>
+									<p class="mt-2">Basal cell carcinoma occurs most often on areas of the skin that are exposed to the sun, such as your head and neck. Most basal cell carcinomas are thought to be caused by long-term exposure to ultraviolet (UV) radiation from sunlight. Avoiding the sun and using sunscreen may help protect against basal cell carcinoma..</p>
+								</div>
+							</a>
+                        </div>
+						<div class="col-lg-4 col-md-6 blog-left-left mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpNRryxcKPESBygT7vJpjjWxDlaYm5gmMU_Gj3uroMVg&s" class="img-fluid" alt="" />
+							<a href="Actinic keratoses.html">
+								<div class="blog-info">
+	
+									<h4>Actinic keratoses</h4>
+	
+									<p class="mt-2"> If treated early, actinic keratosis can be cleared up or removed.</p>
+								</div>
+							</a>
+                        </div>
+                       
+						<div class="col-lg-4 col-md-6 blog-left-left mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://www.mayoralderm.com/wp-content/uploads/2013/09/vascular-lesions-1.jpg" class="img-fluid" alt="" />
+							<a href="Vascular lesions.html">
+								<div class="blog-info">
+	
+									<h4>Vascular lesions</h4>
+	
+									<p class="mt-2">Vascular lesions may have the classical clinical appearance of a superficial soft tissue swelling with a bluish hue and an audible bruit, but may present as an unexplained mass without specific clinical features. Ultrasound, with Doppler imaging, is particularly useful in assessing these lesions</p>
+								</div>
+							</a>
+                        </div>
+                        
+						<div class="col-lg-4 col-md-6 blog-left-left mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+							<img src="https://cdcssl.ibsrv.net/cimg/www.officitecuratedcontent.smb/320x320_85/487/shutterstock-2153145295-689487.jpg" class="img-fluid" alt="" />
+							<a href="Dermatofibroma.html">
+								<div class="blog-info">
+		
+									<h4>Dermatofibroma</h4>
+		
+									<p class="mt-2">understanding of these variants is useful for the clinician, as certain features suggest a more aggressive clinical course and therefore require special care, for example ensuring adequate excision margins and consideration of ongoing follow-up.</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pb-md-5">
+
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlX2Y4yX24If3jR7PEnkW7MTynb3l-D8KOWBI0sUEI&s" class="img-fluid" alt="">
+
+							<!-- <img src="images/s4.jpg" class="img-fliud" alt="" /> -->
+							<a href="disease_prediction.html">
+								<div class="blog-info">
+									<h4>Skin Disease Prediction</h4>
+									<p class="mt-2">Predicting the name and causes of Skin Disease and suggestions to cure it</p>
+								</div>
+                                <br>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+</head>
+
+				
+<body>
+	<div class="homelogo">
+        <link href="bootstrap.css" rel='stylesheet' type='text/css' />
+        <!-- bootstrap css -->
+        <link href="style.css" rel='stylesheet' type='text/css' />
+        <!-- custom css -->
+        <link href="font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+        <!-- //css files -->
+        <!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+    
+		<img src="logo.svg" alt="" class="logo">
+		<h1>Skin Disease Analysis</h1>
+	</div>
+	<div class="dropzone">
+	<div class="info"></div>
+	</div>
+					
+	<div style="text-align:center;" id="finalAns" ></div>
+					
+				
+	<script type="text/javascript" src="./js/imgur.js"></script>
+	<script type="text/javascript" src="./js/upload.js"></script>
+
+</body>
+<!-- //Products & Services -->
+
+
+<!-- Creating custom grid and hover effect -->
+<!-- <section>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="images/s2.jpg" alt="">
+        <div class="overlay">
+           <h2>Hover effect 1</h2>
+           <a class="info" href="#">link here</a>
+        </div>
+    </div>
+</div> -->
+				<footer class="text-center py-5">
+					<div class="container py-md-3">
+						<!-- logo -->
+						<h2 class="logo2 text-center">
+							<a href="#home">
+								Skin Disease Prediction
+							</a>
+						</h2>
+						<!-- //logo -->
+						<!-- address -->
+						<div class="contact-left-footer mt-4">
+
+
+
+
+
+							<!-- <a href="community.html">Community</a> -->
+							</p>
+						</div>
+						<div class="w3l-copy text-center">
+							<p class="text-da">An Environmental Intelligence <br> </p>
+						</div>
+						<p class="homelogo">
+						<p>Made with ❤️ by Gayatri,Bhavani,Swathi,Sravani ❤️</p>
+					</div>
+				</footer>
+<div>
+
+</body>
+
+</html>
